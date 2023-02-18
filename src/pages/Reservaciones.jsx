@@ -3,29 +3,48 @@ function Reservaciones() {
     <>
       <div className="w3-container" id="services" style={{ marginTop: 75 }}>
         <h1 className="w3-xxxlarge w3-text-red">
-          <b>Services.</b>
+          <b>Reservaciones</b>
         </h1>
         <hr
           style={{ width: 50, border: "5px solid red" }}
           className="w3-round"
         />
         <p>
-          We are a interior design service that focus on what's best for your
-          home and what's best for you!
+          Haz tu reservación con para visitarnos.
         </p>
         <p>
-          Some text about our services - what we do and what we offer. We are
-          lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-          occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-          ea commodo consequat.
+        Una gatita que le gusta el mambo
+Una gatita que le gusta el mambo
+Una gatita que le gusta el mambo
+Con todos los malos sale a bellaquear
+Una gatita que le gusta el mambo
+Con todos los malos sale a vacilar
         </p>
+      </div>
+      <div className="m-5">
+      <form>
+                <div className="mb-3">
+                    <label htmlFor="exampleInputEmail1" className="form-label">Nombre</label>
+                    <input type="text" className="form-control" name="nombre" />
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="exampleInputEmail1" className="form-label">Personas</label>
+                    <input type="number" className="form-control" name="puesto" />
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="exampleInputEmail1" className="form-label">Fecha de Reserva</label>
+                    <input type="date" className="form-control" name="fecha_contratacion"  />
+                </div>
+
+                <div className="mb-3">
+                    <label htmlFor="exampleInputEmail1" className="form-label">hora de Reserva</label>
+                    <input type="hour" className="form-control" name="fecha_contratacion"  />
+                </div>
+
+                <button type="submit" className="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Reservar</button>
+            </form>
+
+
       </div>
     </>
   );

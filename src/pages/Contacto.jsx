@@ -3,19 +3,18 @@ function Contacto() {
     <>
       <div className="w3-container" id="contact" style={{ marginTop: 75 }}>
         <h1 className="w3-xxxlarge w3-text-red">
-          <b>Contact.</b>
+          <b>Contacto</b>
         </h1>
         <hr
           style={{ width: 50, border: "5px solid red" }}
           className="w3-round"
         />
         <p>
-          Do you want us to style your home? Fill out the form and fill me in
-          with the details :) We love meeting new people!
+        ¿En qué podemos mejora? 
         </p>
         <form action="/action_page.php" target="_blank">
           <div className="w3-section">
-            <label>Name</label>
+            <label>Nombre</label>
             <input
               className="w3-input w3-border"
               type="text"
@@ -33,7 +32,7 @@ function Contacto() {
             />
           </div>
           <div className="w3-section">
-            <label>Message</label>
+            <label>Mensaje</label>
             <input
               className="w3-input w3-border"
               type="text"
@@ -45,9 +44,37 @@ function Contacto() {
             type="submit"
             className="w3-button w3-block w3-padding-large w3-red w3-margin-bottom"
           >
-            Send Message
+            manda tu mensaje
           </button>
         </form>
+
+        <div className="container">
+            <h4 className=" w3-text-red">
+          <b>Búscanos en nuestras redes sociales</b>
+        </h4>
+        <hr
+          style={{ width: 50, border: "5px solid red" }}
+          className="w3-round"
+        />
+
+
+        <div className="container">
+          <div className="col-2">
+            <p> facebook</p>
+          </div>
+          <div className="col-2">
+            <p> instagram</p>
+          </div>
+          <div className="col-2">
+            <p> tik tok</p>
+          </div>
+          <div className="col-2">
+            <p> linkedin </p>
+          </div>
+        </div>
+            </div>
+
+
       </div>
     </>
   );
