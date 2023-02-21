@@ -1,11 +1,34 @@
-import comida1 from "./img/1.jpg";
-import comida2 from "./img/2.jpg";
-import comida3 from "./img/3.jpg";
-import comida4 from "./img/4.jpg";
-import comida5 from "./img/5.jpg";
-import comida6 from "./img/6.jpg";
+
+import {db} from '../firebase';
+import {collection, onSnapshot} from "firebase/firestore";
+import {useState, useEffect} from "react";
+
+
+
+
 
 function Menu() {
+  const [menu, setMenu]= useState([]);
+  const getData = async () => {
+    onSnapshot(collection(db,"menu"), (querySnapshot)=>{
+      setMenu(querySnapshot.docs.map(doc=>{
+          return{
+              ...doc.data()
+          }
+      }))
+  })
+}
+
+useEffect(()=>{
+getData();
+},[])
+
+
+
+
+
+
+
   return (
     <>
       <div className="w3-container" id="designers" style={{ marginTop: 40 }}>
@@ -24,133 +47,37 @@ function Menu() {
         <p>
           <b>Tofu al gusto </b>:
         </p>
+      </div> 
+
+      {menu.map((producto,index)=>{
+    return(
+
+      <div className="container overflow-hidden text-center">
+      <div class="row m-4 productoMenu d-flex">
+          <div class="col-4">
+            <div class="m-3 productoMenu text-center rounded mx-auto d-block">
+              <img
+              className='img-thumbnail'
+                src={producto.foto}
+                alt="comida con tofu"
+                style={{width: '200px', height: '200px' }}
+              />
+            </div>
+          </div>
+          <div className="col-6 container m-3 text-start">
+                <h3>{producto.platillo}</h3>
+                <p>{producto.costo}</p>
+                <p>
+              {producto.descripcion}
+                </p>
+          </div>
+          </div>
       </div>
 
-      <div class="container overflow-hidden text-center">
-        <div class="row m-4 productoMenu">
-          <div class="col-4">
-            <div class="m-3 productoMenu">
-              <img
-                src={comida3}
-                alt="comida con tofu"
-                style={{ width: "100%" }}
-              />
-            </div>
-          </div>
-          <div className="col-6 m-3 text-start">
-                <h3>Hot Cakes</h3>
-                <p>no es tofu pero sí desayuno</p>
-                <p>
-                 esta es una descripción de comida, puede traer todos los ingredientes usados, una descripcioón mamalona o algo
-                </p>
-          </div>
-          </div>
+    )
+})}
 
 
-
-          <div class="row m-4 productoMenu">
-          <div class="col-4">
-            <div class="m-3 productoMenu">
-              <img
-                src={comida2}
-                alt="comida con tofu"
-                style={{ width: "100%" }}
-              />
-            </div>
-          </div>
-          <div className="col-6 m-3 text-start">
-                <h3>Combo Hot Cakes</h3>
-                <p>no es tofu pero sí desayuno</p>
-                <p>
-                 esta es una descripción de comida, puede traer todos los ingredientes usados, una descripcioón mamalona o algo 
-                </p>
-          </div>
-          </div>
-
-
-
-          <div class="row m-4 productoMenu">
-          <div class="col-4">
-            <div class="m-3 productoMenu">
-              <img
-                src={comida4}
-                alt="comida con tofu"
-                style={{ width: "100%" }}
-              />
-            </div>
-          </div>
-          <div className="col-6 m-3 text-start">
-                <h3>Chile en Nogada</h3>
-                <p>no es tofu tampoco desayuno pero es lo que hay</p>
-                <p>
-                 esta es una descripción de comida, puede traer todos los ingredientes usados, una descripcioón mamalona o algo
-                </p>
-          </div>
-          </div>
-
-
-
-          <div class="row m-4 productoMenu">
-          <div class="col-4">
-            <div class="m-3 productoMenu">
-              <img
-                src={comida1}
-                alt="comida con tofu"
-                style={{ width: "100%" }}
-              />
-            </div>
-          </div>
-          <div className="col-6 m-3 text-start">
-                <h3>Enfrijoquiles</h3>
-                <p>chilaquiles con salsa de frijol</p>
-                <p>
-                 esta es una descripción de comida, puede traer todos los ingredientes usados, una descripcioón mamalona o algo
-                </p>
-          </div>
-          </div>
-
-
-
-          <div class="row m-4 productoMenu">
-          <div class="col-4">
-            <div class="m-3 productoMenu">
-              <img
-                src={comida6}
-                alt="comida con tofu"
-                style={{ width: "100%" }}
-              />
-            </div>
-          </div>
-          <div className="col-6 m-3 text-start">
-                <h3>Alitas de Coliflor</h3>
-                <p>no es tofu pero sí desayuno</p>
-                <p>
-                 esta es una descripción de comida, puede traer todos los ingredientes usados, una descripcioón mamalona o algo
-                </p>
-          </div>
-          </div>
-
-
-          <div class="row m-3 productoMenu">
-          <div class="col-4">
-            <div class="m-3 productoMenu">
-              <img
-                src={comida5}
-                alt="comida con tofu"
-                style={{ width: "100%" }}
-              />
-            </div>
-          </div>
-          <div className="col-6 m-3 text-start">
-                <h3>Pastor de Setas</h3>
-                <p>no es tofu pero sí desayuno</p>
-                <p>
-                 esta es una descripción de comida, puede traer todos los ingredientes usados, una descripcioón mamalona o algo
-                </p>
-          </div>
-          </div>
-
-        </div>
 
     </>
   );

@@ -58,3 +58,9 @@ button:active {
   transform: translate(3px, 3px);
 }
 
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
