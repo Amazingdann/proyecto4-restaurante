@@ -6,6 +6,7 @@ import AppRouter from './routes/AppRouter';
 
 
 function App() {
+  console.log(process.env.REACT_APP_API_URL);
   return (
 <>
 <BrowserRouter>
