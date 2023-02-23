@@ -62,7 +62,7 @@ Una gatita que le gusta el mambo
 Con todos los malos sale a bellaquear
 Una gatita que le gusta el mambo
 Con todos los malos sale a vacilar
-<code>{JSON.stringify(formulario)}</code>
+
 
         </p>
       </div>

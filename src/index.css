@@ -71,3 +71,44 @@ footer{
   border: 1px solid rgba(255, 255, 255, 0.125);
   color:whitesmoke
 }
+
+.linksSM{
+  color: whitesmoke;
+}
+
+.linksSM :active {
+  color: hsl(6, 64%, 52%);
+}
+
+.linksSM:hover {
+  color:  hsl(6, 64%, 52%) ;
+}
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+  .img-prod {
+  
+    height: '150 px'; 
+    
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+  .img-prod {
+  
+    height: '100 px'; 
+    
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .img-prod {
+
+    height: '50 px'; 
+    
+  }
+}

@@ -16,6 +16,7 @@ function Ubicacion() {
           Calz. del Rey S/N, Bosque de Chapultepec I Secc, Miguel Hidalgo, 11580 Ciudad de México, CDMX
           </p>
 
+
         
         </div>
       </>

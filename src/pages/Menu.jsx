@@ -52,12 +52,12 @@ getData();
       {menu.map((producto,index)=>{
     return(
 
-      <div className="container overflow-hidden text-center">
-      <div class="row m-4 productoMenu d-flex">
-          <div class="col-4">
-            <div class="m-3 productoMenu text-center rounded mx-auto d-block">
+      <div className=" menu container overflow-hidden text-center">
+      <div class="row m-4 productoMenu d-flex flex-wrap">
+          <div class="col-4 ">
+            <div class="m-3 productoMenu text-center mx-auto d-block">
               <img
-              className='img-thumbnail'
+              className='img-prod img-fluid'
                 src={producto.foto}
                 alt="comida con tofu"
                 style={{width: '200px', height: '200px' }}

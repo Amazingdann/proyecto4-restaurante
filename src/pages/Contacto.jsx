@@ -1,3 +1,7 @@
+import {BsLinkedin, BsInstagram, BsFacebook} from 'react-icons/bs';
+import { SiTiktok } from 'react-icons/si';
+
+
 function Contacto() {
   return (
     <>
@@ -60,16 +64,16 @@ function Contacto() {
 
         <div className="container">
           <div className="col-2">
-            <p> facebook</p>
+            <p> facebook <BsFacebook/></p> 
           </div>
           <div className="col-2">
-            <p> instagram</p>
+            <p> instagram <BsInstagram/></p> 
           </div>
           <div className="col-2">
-            <p> tik tok</p>
+            <p> tik tok <SiTiktok/></p> 
           </div>
           <div className="col-2">
-            <p> linkedin </p>
+            <p> linkedin <BsLinkedin/> </p> 
           </div>
         </div>
             </div>
